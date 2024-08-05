@@ -1,0 +1,124 @@
+@import '../../mixin.scss';
+.better-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    z-index: 1;
+  
+    .better-heading {
+      h1 {
+        font-size: 2rem;
+        color: #004733; 
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 0.9rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+    }
+  
+    .all-sec{
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+       width: 100%;
+       @include xl{
+         justify-content: space-between;
+        flex-direction: row;
+       }
+       .options{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @include xl{
+          flex-direction: row;
+        }
+       }
+      .better-services {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        @include xl{
+          width: 300px;
+        }
+    
+        .service {
+          margin-bottom: 15px;
+    
+          h2 {
+            font-size: 1.3rem;
+            color: #004733; 
+            margin-bottom: 5px;
+    
+            span {
+              color: #b2afaf; 
+              font-weight: 200;
+            }
+          }
+    
+          p {
+            font-size: 0.9rem;
+            color: #333;
+          }
+        }
+      }
+    
+      .better-resources,
+      .better-company,
+      .better-contact,
+      .better-legal {
+        margin-bottom: 20px;
+    
+        h3 {
+          font-size: 1.1rem;
+          color: #000;
+          margin-bottom: 10px;
+        }
+    
+        ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          a{
+            li{
+              color:#004733;
+              font-weight: bold;
+            }
+          }
+    
+          li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  
+    .better-footer {
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+      font-size: 0.8rem;
+      color: #555;
+  
+      p {
+        margin-bottom: 10px;
+        line-height: 1.5;
+  
+        a {
+          color: #2c8d6b;
+          text-decoration: none;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,285 @@
+@import "../../mixin.scss";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #004733;
+  color: white;
+  padding: 15px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    a{
+      text-decoration: none;
+    }
+    h1 {
+      font-size: 1.7rem;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .services {
+      display: none;
+      gap: 20px;
+      align-items: center;
+      @include xl {
+        display: flex;
+      }
+      li {
+        transition: all ease 0.2s;
+        list-style: none;
+        position: relative;
+        a{
+          color: yellow;
+        }
+        .libox {
+          width: 350px;
+          height: 370px;
+          position: absolute;
+          bottom: -380px;
+          padding: 10x 0;
+          box-shadow: 1px 1px 10px gray;
+          left: 0px;
+          background-color: white;
+          border-radius: 10px;
+          display: none;
+          .li-content {
+            height: fit-content;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            //  gap: 10px;
+            p {
+              border-radius: 0;
+              span {
+                background-color: rgb(243, 177, 55);
+                padding: 5px 10px;
+                border-radius: 10px;
+              }
+            }
+            p:hover {
+              background-color: rgb(235, 230, 230);
+            }
+          }
+        }
+        p {
+          padding: 10px 30px;
+          border-radius: 30px;
+          transition: all ease 0.2s;
+        }
+        p:hover {
+          background-color: white;
+          color: black;
+        }
+        p:hover + .libox {
+          display: block;
+        }
+      }
+    }
+  }
+  // ,,,,,,,,
+  .options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    font-family: __myFont_5f7ae9 (woff2) __myFont_Fallback_5f7ae9;
+    li {
+      list-style: none;
+    }
+    .sign {
+      display: none;
+      padding: 10px 15px;
+      border-radius: 30px;
+      transition: all ease 0.2s;
+      @include xl {
+        display: block;
+      }
+    }
+    .sign:hover {
+      background-color: white;
+      color: black;
+    }
+    .call {
+      position: relative;
+      .circle {
+        height: 30px;
+        width: 30px;
+        border: 1px solid;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease 0.2s;
+        @include xl {
+          height: 50px;
+          width: 50px;
+        }
+      }
+      .box {
+        position: absolute;
+        bottom: -90px;
+        left: -270px;
+        background-color: white;
+        color: black;
+        height: 80px;
+        width: 300px;
+        box-shadow: 1px 1px 10px gray;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        display: none;
+        span {
+          text-decoration: underline;
+        }
+        span:hover {
+          color: green;
+        }
+      }
+      .circle:hover {
+        background-color: white;
+        color: #004733;
+      }
+      .circle:hover + .box {
+        display: flex;
+      }
+    }
+    button {
+      background-color: #1CDA7B;
+      border: none;
+      font-size: 1rem;
+      padding: 5px 15px;
+      border-radius: 20px;
+      color: #004733;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all ease 0.2s;
+      @include xl {
+        padding: 15px 20px;
+        border-radius: 30px;
+      }
+    }
+    button:hover {
+      background-color: #004733;
+      color: white;
+    }
+    .ham {
+      cursor: pointer;
+      @include xl {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.sidenav{
+  transition: all ease 0.2s;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  transform: translateX(-100%);
+  .nav-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    .cross{
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .cross:hover{
+      background-color: rgb(239, 231, 231);
+    }
+  }
+  .dropdowns{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+    .dropdown{
+      .drophead{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .dropcontent{
+        display:none;
+        flex-direction: column;
+        padding: 10px;
+        p{
+          padding:15px 10px;
+          border-radius: 10px;
+          span{
+                background-color: rgb(243, 177, 55);
+                padding: 5px 10px;
+                border-radius: 10px;
+          }
+        }
+        p:hover{
+          background-color: rgb(236, 224, 224);
+        }
+      }
+    }
+  }
+  .call{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(195, 231, 195);
+    padding: 10px;
+    border-radius: 30px;
+    span{
+      text-decoration: underline;
+    }
+    span:hover{
+      color:#004733;
+    }
+  }
+  button{
+    border: none;
+    padding: 21px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all ease 0.1s;
+  }
+  .continue{
+    background-color: #1CDA7B;
+  }
+  .continue:hover{
+    background-color: #004733;
+    color: white;
+  }
+  .signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid gray;
+  }
+  .signin:hover{
+    border: 5px solid #004733;
+    color: #004733;
+  }
+}
+
