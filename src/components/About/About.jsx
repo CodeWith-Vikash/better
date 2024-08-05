@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './about.scss';
 import Navbar from '../Navbar/Navbar';
-import Timeline from './timeline/Timeline'
 
 const About = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -66,7 +65,6 @@ const About = () => {
         </p>
       </div>
       </div>
-      {/* <Timeline/> */}
     </div>
   );
 };
